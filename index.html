@@ -131,26 +131,28 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburger Menü Beispiel</title>
+    <title>Martin Watzinger Website</title>
     <style>
-        /* Hamburger Menu Styles */
+        /* Allgemeine Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        /* Header und Logo */
+        /* Header Styling */
         .header-wrap {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 15px 30px;
             background-color: #333;
             color: white;
         }
 
-        .wsite-logo {
+        .wsite-logo a {
+            color: white;
+            text-decoration: none;
             font-size: 24px;
         }
 
@@ -171,45 +173,89 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
             border-radius: 5px;
         }
 
-        /* Dropdown Menu */
+        /* Mobile Menü Styling */
+        #mobile-input {
+            display: none;
+        }
+
         #nav {
             display: none;
             position: absolute;
             top: 0;
-            right: 0;
+            left: 0;
             width: 100%;
-            background-color: #333;
+            height: 100%;
+            background-color: white;
+            color: #333;
+            box-sizing: border-box;
+            padding: 50px 20px;
             text-align: center;
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         #nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
+            width: 100%;
         }
 
         #nav ul li {
-            padding: 15px;
+            padding: 15px 0;
         }
 
         #nav ul li a {
-            color: white;
+            color: #333;
             text-decoration: none;
             font-size: 18px;
             display: block;
+            transition: background-color 0.3s ease;
         }
 
         #nav ul li a:hover {
-            background-color: #555;
+            background-color: #f5f5f5;
         }
 
-        /* Checkbox Trick */
-        #mobile-input {
-            display: none;
-        }
-
+        /* Das Menü wird angezeigt, wenn das Hamburger-Symbol angeklickt wird */
         #mobile-input:checked + #nav {
-            display: block;
+            display: flex;
+        }
+
+        /* Desktop-Version */
+        @media (min-width: 751px) {
+            #nav {
+                display: flex;
+                position: relative;
+                justify-content: flex-end;
+                padding: 0;
+                box-shadow: none;
+                width: auto;
+                background-color: transparent;
+            }
+
+            #nav ul {
+                display: flex;
+                list-style: none;
+            }
+
+            #nav ul li {
+                padding: 0 20px;
+            }
+
+            #nav ul li a {
+                padding: 0;
+                font-size: 18px;
+                display: inline-block;
+            }
+
+            /* Hamburger-Menü auf größeren Bildschirmen ausblenden */
+            #mobile-input {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -224,8 +270,8 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
             <span></span>
         </label>
         <span class="wsite-logo">
-            <a href="https://martinwatzinger.github.io/website/" style="color:white; text-decoration:none;">
-                <span id="wsite-title">Martin Watzinger</span>
+            <a href="https://martinwatzinger.github.io/website/">
+                Martin Watzinger
             </a>
         </span>
     </div>
@@ -235,23 +281,24 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 <input type="checkbox" id="mobile-input">
 <div id="nav" class="menu">
     <ul class="wsite-menu-default">
-        <li id="home" class="wsite-menu-item-wrap">
+        <li class="wsite-menu-item-wrap">
             <a href="https://martinwatzinger.github.io/website/" class="wsite-menu-item">Home</a>
         </li>
-        <li id="cv" class="wsite-menu-item-wrap">
+        <li class="wsite-menu-item-wrap">
             <a href="https://martinwatzinger.github.io/website/CV_Watzinger_18102024.pdf" target="_blank" class="wsite-menu-item">CV</a>
         </li>
-        <li id="research" class="wsite-menu-item-wrap">
+        <li class="wsite-menu-item-wrap">
             <a href="https://martinwatzinger.github.io/website/Research%20-%20Martin%20Watzinger.html" class="wsite-menu-item">Research</a>
         </li>
-        <li id="contact" class="wsite-menu-item-wrap">
-            <a href="https://martinwatzinger.github.io/website/contact.html" class="wsite-menu-item">Contact</a>
+        <li class="wsite-menu-item-wrap">
+            <a href="https://martinwatzinger.github.io/website/Contact%20-%20Martin%20Watzinger.html" class="wsite-menu-item">Contact</a>
         </li>
     </ul>
 </div>
 
 </body>
 </html>
+
 
 
 
