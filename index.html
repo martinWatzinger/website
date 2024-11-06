@@ -183,18 +183,21 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
             display: none;
         }
 
-        /* Das Dropdown-Menü */
+        /* Das Dropdown-Menü (Mobile Version) */
         #nav {
             display: none;
             position: absolute;
             top: 0;
             right: 0;
-            width: 100%;
-            background-color: #333;
+            width: 80%; /* Kleinere Breite für das Dropdown-Menü */
+            background-color: white; /* Weißer Hintergrund */
+            color: #333; /* Textfarbe */
             text-align: center;
             box-sizing: border-box;
             padding-top: 50px; /* Platz für das Hamburger-Symbol */
             z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+            border-left: 2px solid #ccc; /* Abgrenzung nach links */
         }
 
         #nav ul {
@@ -204,11 +207,11 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
         }
 
         #nav ul li {
-            padding: 15px 20px;
+            padding: 15px 0;
         }
 
         #nav ul li a {
-            color: white;
+            color: #333;
             text-decoration: none;
             font-size: 18px;
             display: block;
@@ -217,7 +220,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
         }
 
         #nav ul li a:hover {
-            background-color: #555;
+            background-color: #f5f5f5; /* Hellerer Hover-Effekt */
         }
 
         /* Anzeigen des Menüs, wenn Checkbox aktiviert */
@@ -225,13 +228,16 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
             display: block;
         }
 
-        /* Verbesserung für große Bildschirmgrößen */
+        /* Desktop Version (keine Hamburger-Menü) */
         @media (min-width: 751px) {
             #nav {
                 display: flex;
                 position: relative;
                 justify-content: flex-end;
                 padding: 0;
+                box-shadow: none;
+                width: auto;
+                background-color: transparent;
             }
 
             #nav ul {
@@ -295,6 +301,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 
 </body>
 </html>
+
 
 
 						</li>
