@@ -125,77 +125,34 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 </script>
 		
 		
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburger Menü</title>
-    <style>
-        /* Basis-Styling für das Hamburger-Icon */
-        .hamburger {
-            cursor: pointer;
-            display: inline-block;
-        }
-        .hamburger span {
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: #333;
-            margin: 5px 0;
-            transition: 0.4s;
-        }
-
-        /* Mobile Navigation */
-        #nav {
-            display: none;
-            background-color: #f2f2f2;
-            padding: 10px;
-        }
-
-        /* Wenn das mobile Menü aktiviert ist, wird es angezeigt */
-        #mobile-input:checked ~ #nav {
-            display: block;
-        }
-
-        /* Media Query für Bildschirme unter 768px */
-        @media (max-width: 768px) {
-            /* Navigation standardmäßig ausblenden */
-            #nav {
-                display: none;
-            }
-
-            /* Menü anzeigen, wenn Checkbox aktiviert ist */
-            #mobile-input:checked ~ #nav {
-                display: block;
-            }
-        }
-    </style>
+<style type="text/css">.customer-accounts-app__body[data-v-7ef42737]{width:100%}.customer-accounts-app__modal-wrapper[data-v-7ef42737]{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:17;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(0,0,0,.25)}.customer-accounts-app__modal[data-v-7ef42737]{width:580px;box-sizing:border-box;max-height:100%;min-height:415px;overflow-y:auto;z-index:18;padding:24px;background:#fff;display:flex}.wsite-theme-dark .customer-accounts-app__modal-wrapper[data-v-7ef42737]{background:hsla(0,0%,100%,.25)}.wsite-theme-dark .customer-accounts-app__modal[data-v-7ef42737]{background:#000}@media (max-width:750px){.customer-accounts-app__modal[data-v-7ef42737]{width:100%;height:100%}}</style><style type="text/css">.loading[data-v-db79aa1c]{display:flex;width:100%;align-items:center;justify-content:center;margin:15px 0}</style><style type="text/css">.page-header__wrapper[data-v-ed59fae0]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.page-header__text[data-v-ed59fae0]{margin:0 32px 0 0}.page-header__divider[data-v-ed59fae0]{height:1px;width:100%;margin:24px 0;background:rgba(0,0,0,.1)}</style><style type="text/css">.form-field[data-v-2b04d498]{margin:16px 0}.form-field__label[data-v-2b04d498]{display:flex;flex-direction:column}.form-field__title[data-v-2b04d498]{margin-bottom:8px;font-size:90%;color:#3b526d}.wsite-theme-dark .form-field__title[data-v-2b04d498]{color:#dfe6ee}.form-field__error[data-v-2b04d498]{margin-top:14px}</style><style type="text/css">.field-error[data-v-338d8d38]{color:#ff2825}</style><style type="text/css">.form-instructions[data-v-8ddff154]{margin-bottom:24px}</style><style type="text/css">.site-input[data-v-4c05aa90]{border:1px solid #dbdbdb;padding:8px;border-radius:2px}.site-input__is-invalid[data-v-4c05aa90]{border:1px solid #ff2825}</style><style type="text/css">.actions-row[data-v-136b380e]{margin-top:24px;display:flex;flex-direction:row;justify-content:space-between;align-items:center}.actions-row div[data-v-136b380e]:first-child{margin-right:16px}</style><style type="text/css">.back-button[data-v-fe280eac]{display:flex;flex-direction:row;align-items:center}.back-button__icon[data-v-fe280eac]{margin:0 8px 0 0}</style><style type="text/css">p[data-v-6cc325c4]{font-weight:700}.order-confirmation__checkbox[data-v-6cc325c4]{margin-right:6px}.order-confirmation__success-message[data-v-6cc325c4]{display:flex;flex-direction:row;align-items:center}</style><style type="text/css">.register__privacy-policy[data-v-0761b96f]{margin:24px 0;font-size:small}</style><style type="text/css">.customer-accounts-app__body[data-v-55d84bd4]{width:100%}.customer-accounts-app__modal-wrapper[data-v-55d84bd4]{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:17;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(0,0,0,.25)}.customer-accounts-app__modal[data-v-55d84bd4]{width:580px;box-sizing:border-box;max-height:100%;min-height:415px;overflow-y:auto;z-index:18;padding:24px;background:#fff;display:flex}.wsite-theme-dark .customer-accounts-app__modal-wrapper[data-v-55d84bd4]{background:hsla(0,0%,100%,.25)}.wsite-theme-dark .customer-accounts-app__modal[data-v-55d84bd4]{background:#000}@media (max-width:600px){.customer-accounts-app__modal[data-v-55d84bd4]{width:100%;height:100%}}</style><style type="text/css">.account-details__wrapper[data-v-398277ef]{width:100%}.account-details__group[data-v-398277ef]{margin-bottom:24px;text-align:left}.account-details__table-container[data-v-398277ef]{overflow:auto}.account-details__title[data-v-398277ef]{text-align:left;margin-bottom:6px}.account-details__log-out[data-v-398277ef]{cursor:pointer}.account-details__error[data-v-398277ef]{margin:36px 0;text-align:left}.error[data-v-398277ef]{color:#ff2825}</style><style type="text/css">.section-header__wrapper[data-v-30a09418]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.section-header__text[data-v-30a09418]{margin:24px 0}</style><style type="text/css">.empty-content-area__container[data-v-d17db2d0]{display:flex;flex-direction:row;align-items:center;justify-content:center;margin-bottom:32px;width:100%;min-height:80px;background:#f2f2f2}.wsite-theme-dark .empty-content-area__container[data-v-d17db2d0]{background:#000}</style><style type="text/css">.order-details__table[data-v-4601454e]{width:100%;margin-top:12px;margin-bottom:36px;empty-cells:show;border-collapse:collapse;border-spacing:0;border:none}.order-details__table th[data-v-4601454e]{margin:0;padding:16px;text-align:left;background:#f2f2f2}.wsite-theme-dark .order-details__table th[data-v-4601454e]{background:#000}.order-details__table td[data-v-4601454e]{margin:0;padding:16px;text-align:left}</style><style type="text/css">.shipping-address__wrapper[data-v-0b54f770]{text-align:left;width:100%}</style><style type="text/css">.reset-password__link[data-v-4f820709]{cursor:pointer}</style></head>
+	 @media (max-width: 768px) {
+      #nav {
+        display: none;
+      }
+      
+      #nav-trigger:checked + #nav {
+        display: block;
+      }
+      
+     .hamburger {
+        cursor: pointer;
+      }
+    }
+  </style>
+  
+  <input type="checkbox" id="mobile-input" />
+  <label id="nav-trigger" class="hamburger" for="mobile-input"><span></span></label>
+  
+  <div id="nav" class="menu">
+    <ul class="wsite-menu-default">
+     ...
+    </ul>
+  </div>
 </head>
-<body>
+	</a>
 
-    <!-- Checkbox für das Hamburger-Menü -->
-    <input type="checkbox" id="mobile-input" style="display: none;">
-
-    <!-- Label, das als Hamburger-Button dient -->
-    <label for="mobile-input" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-
-    <!-- Navigation Menü -->
-    <div id="nav">
-        <ul class="wsite-menu-default">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-
-</body>
-</html>
+</span>
 
 
 </span>
