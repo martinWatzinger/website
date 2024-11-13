@@ -133,6 +133,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
   .menu {
     display: flex;
     justify-content: flex-end;
+    position: relative;
   }
 
   .hamburger {
@@ -159,12 +160,13 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
       flex-direction: column;
       background-color: #fff;
       position: absolute;
-      top: 60px;
+      top: 50px;
       left: 10px;
-      width: 150px;
+      width: 180px;
       border: 1px solid #ddd;
       padding: 0;
       margin: 0;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .menu.open ul {
@@ -182,6 +184,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
       color: #000;
       font-size: 16px;
       display: block;
+      padding: 8px 12px;
     }
 
     .menu a:hover {
@@ -202,11 +205,11 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
   <div id="header" class="minimal">
     <div class="header-wrap">
       <div class="logo">
-        <div id="nav-trigger" class="hamburger">
+        <label id="nav-trigger" class="hamburger" for="mobile-input">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </label>
         <span class="wsite-logo">
           <a href="https://martinwatzinger.github.io/website/">
             <span id="wsite-title">Martin Watzinger</span>
@@ -225,8 +228,8 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 
   <script type="text/javascript">
     document.getElementById('nav-trigger').addEventListener('click', function() {
-      var nav = document.getElementById('nav');
-      nav.classList.toggle('open');
+      // Toggle the open class to show or hide the menu
+      document.getElementById('nav').classList.toggle('open');
     });
   </script>
 </body>
