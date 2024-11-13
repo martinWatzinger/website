@@ -123,39 +123,10 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 		)
 	}
 //-->
-</script>
-		
 <style type="text/css">
   /* Standard Styles */
   .customer-accounts-app__body[data-v-7ef42737] {
     width: 100%;
-  }
-
-  /* Modal */
-  .customer-accounts-app__modal-wrapper[data-v-7ef42737] {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 17;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, .25);
-  }
-
-  .customer-accounts-app__modal[data-v-7ef42737] {
-    width: 580px;
-    box-sizing: border-box;
-    max-height: 100%;
-    min-height: 415px;
-    overflow-y: auto;
-    z-index: 18;
-    padding: 24px;
-    background: #fff;
-    display: flex;
   }
 
   /* Hamburger Navigation Styles */
@@ -186,11 +157,11 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
     .menu ul {
       display: none;
       flex-direction: column;
+      background-color: #fff;
       position: absolute;
       top: 60px;
       left: 10px;
       width: 150px;
-      background-color: #fff;
       border: 1px solid #ddd;
       padding: 0;
       margin: 0;
@@ -225,18 +196,17 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
     align-items: center;
     justify-content: space-between;
   }
-
-  /* Additional Styles */
-  #nav-trigger {
-    margin-right: 15px;
-  }
 </style>
 
 <body class="no-banner has-header wsite-page-index wsite-theme-light postload minimal-header">
   <div id="header" class="minimal">
     <div class="header-wrap">
       <div class="logo">
-        <label id="nav-trigger" class="hamburger"><span></span><span></span><span></span></label>
+        <div id="nav-trigger" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <span class="wsite-logo">
           <a href="https://martinwatzinger.github.io/website/">
             <span id="wsite-title">Martin Watzinger</span>
@@ -255,10 +225,12 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 
   <script type="text/javascript">
     document.getElementById('nav-trigger').addEventListener('click', function() {
-      document.getElementById('nav').classList.toggle('open');
+      var nav = document.getElementById('nav');
+      nav.classList.toggle('open');
     });
   </script>
 </body>
+
 
 
 
