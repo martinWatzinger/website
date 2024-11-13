@@ -158,15 +158,18 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
     .menu ul {
       display: none;
       flex-direction: column;
+      align-items: center;
       background-color: #fff;
-      position: absolute;
-      top: 50px;
-      left: 10px;
-      width: 180px;
-      border: 1px solid #ddd;
-      padding: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 1000;
+      padding-top: 60px;
       margin: 0;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      list-style: none;
+      text-align: center;
     }
 
     .menu.open ul {
@@ -174,30 +177,32 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
     }
 
     .menu li {
-      text-align: left;
-      padding: 10px;
+      padding: 20px 0;
+      font-size: 20px;
       font-family: Arial, sans-serif;
     }
 
     .menu a {
       text-decoration: none;
       color: #000;
-      font-size: 16px;
-      display: block;
-      padding: 8px 12px;
+      font-size: 24px;
     }
 
     .menu a:hover {
-      background-color: #f5f5f5;
+      color: #555;
     }
-  }
 
-  /* Desktop Styles (unchanged) */
-  .page-header__wrapper[data-v-ed59fae0] {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    /* Full-screen background overlay */
+    .menu.open::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
   }
 </style>
 
@@ -205,7 +210,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
   <div id="header" class="minimal">
     <div class="header-wrap">
       <div class="logo">
-        <label id="nav-trigger" class="hamburger" for="mobile-input">
+        <label id="nav-trigger" class="hamburger">
           <span></span>
           <span></span>
           <span></span>
@@ -228,11 +233,11 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 
   <script type="text/javascript">
     document.getElementById('nav-trigger').addEventListener('click', function() {
-      // Toggle the open class to show or hide the menu
       document.getElementById('nav').classList.toggle('open');
     });
   </script>
 </body>
+
 
 
 
