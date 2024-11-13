@@ -123,17 +123,59 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 		)
 	}
 //-->
+		
 <style type="text/css">
   /* Standard Styles */
   .customer-accounts-app__body[data-v-7ef42737] {
     width: 100%;
   }
 
+  /* Modal */
+  .customer-accounts-app__modal-wrapper[data-v-7ef42737] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 17;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .25);
+  }
+
+  .customer-accounts-app__modal[data-v-7ef42737] {
+    width: 580px;
+    box-sizing: border-box;
+    max-height: 100%;
+    min-height: 415px;
+    overflow-y: auto;
+    z-index: 18;
+    padding: 24px;
+    background: #fff;
+    display: flex;
+  }
+
+  .wsite-theme-dark .customer-accounts-app__modal-wrapper[data-v-7ef42737] {
+    background: hsla(0, 0%, 100%, .25);
+  }
+
+  .wsite-theme-dark .customer-accounts-app__modal[data-v-7ef42737] {
+    background: #000;
+  }
+
+  @media (max-width: 750px) {
+    .customer-accounts-app__modal[data-v-7ef42737] {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   /* Hamburger Navigation Styles */
   .menu {
     display: flex;
     justify-content: flex-end;
-    position: relative;
   }
 
   .hamburger {
@@ -158,20 +200,14 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
     .menu ul {
       display: none;
       flex-direction: column;
-      align-items: flex-start;
-      padding-left: 20px;
       background-color: #fff;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      z-index: 1000;
-      padding-top: 60px;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      border: 1px solid #ddd;
+      padding: 0;
       margin: 0;
-      list-style: none;
-      text-align: left;
-      font-family: Arial, sans-serif;
     }
 
     .menu.open ul {
@@ -179,43 +215,262 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
     }
 
     .menu li {
-      padding: 20px 0;
-      font-size: 20px;
+      text-align: center;
+      padding: 10px;
     }
 
     .menu a {
       text-decoration: none;
-      color: #000;
-      font-size: 24px;
+      color: #333;
+      font-size: 16px;
+      display: block;
     }
 
     .menu a:hover {
-      color: #555;
-    }
-
-    /* Full-screen background overlay */
-    .menu.open::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
+      background-color: #f5f5f5;
     }
   }
-</style>
 
+  /* Desktop Styles (unchanged) */
+  .page-header__wrapper[data-v-ed59fae0] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-header__text[data-v-ed59fae0] {
+    margin: 0 32px 0 0;
+  }
+
+  .page-header__divider[data-v-ed59fae0] {
+    height: 1px;
+    width: 100%;
+    margin: 24px 0;
+    background: rgba(0, 0, 0, .1);
+  }
+  
+  .form-field[data-v-2b04d498] {
+    margin: 16px 0;
+  }
+
+  .form-field__label[data-v-2b04d498] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-field__title[data-v-2b04d498] {
+    margin-bottom: 8px;
+    font-size: 90%;
+    color: #3b526d;
+  }
+
+  .wsite-theme-dark .form-field__title[data-v-2b04d498] {
+    color: #dfe6ee;
+  }
+
+  .form-field__error[data-v-2b04d498] {
+    margin-top: 14px;
+  }
+
+  .field-error[data-v-338d8d38] {
+    color: #ff2825;
+  }
+
+  .form-instructions[data-v-8ddff154] {
+    margin-bottom: 24px;
+  }
+
+  .site-input[data-v-4c05aa90] {
+    border: 1px solid #dbdbdb;
+    padding: 8px;
+    border-radius: 2px;
+  }
+
+  .site-input__is-invalid[data-v-4c05aa90] {
+    border: 1px solid #ff2825;
+  }
+
+  .actions-row[data-v-136b380e] {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .actions-row div[data-v-136b380e]:first-child {
+    margin-right: 16px;
+  }
+
+  .back-button[data-v-fe280eac] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .back-button__icon[data-v-fe280eac] {
+    margin: 0 8px 0 0;
+  }
+
+  p[data-v-6cc325c4] {
+    font-weight: 700;
+  }
+
+  .order-confirmation__checkbox[data-v-6cc325c4] {
+    margin-right: 6px;
+  }
+
+  .order-confirmation__success-message[data-v-6cc325c4] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .register__privacy-policy[data-v-0761b96f] {
+    margin: 24px 0;
+    font-size: small;
+  }
+
+  .customer-accounts-app__body[data-v-55d84bd4] {
+    width: 100%;
+  }
+
+  .customer-accounts-app__modal-wrapper[data-v-55d84bd4] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 17;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .25);
+  }
+
+  .customer-accounts-app__modal[data-v-55d84bd4] {
+    width: 580px;
+    box-sizing: border-box;
+    max-height: 100%;
+    min-height: 415px;
+    overflow-y: auto;
+    z-index: 18;
+    padding: 24px;
+    background: #fff;
+    display: flex;
+  }
+
+  .wsite-theme-dark .customer-accounts-app__modal-wrapper[data-v-55d84bd4] {
+    background: hsla(0, 0%, 100%, .25);
+  }
+
+  .wsite-theme-dark .customer-accounts-app__modal[data-v-55d84bd4] {
+    background: #000;
+  }
+
+  @media (max-width: 600px) {
+    .customer-accounts-app__modal[data-v-55d84bd4] {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /* Desktop Layout */
+  .account-details__wrapper[data-v-398277ef] {
+    width: 100%;
+  }
+
+  .account-details__group[data-v-398277ef] {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .account-details__table-container[data-v-398277ef] {
+    overflow: auto;
+  }
+
+  .account-details__title[data-v-398277ef] {
+    text-align: left;
+    margin-bottom: 6px;
+  }
+
+  .account-details__log-out[data-v-398277ef] {
+    cursor: pointer;
+  }
+
+  .account-details__error[data-v-398277ef] {
+    margin: 36px 0;
+    text-align: left;
+  }
+
+  .error[data-v-398277ef] {
+    color: #ff2825;
+  }
+
+  .section-header__wrapper[data-v-30a09418] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .section-header__text[data-v-30a09418] {
+    margin: 24px 0;
+  }
+
+  .empty-content-area__container[data-v-d17db2d0] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    width: 100%;
+    min-height: 80px;
+    background: #f2f2f2;
+  }
+
+  .wsite-theme-dark .empty-content-area__container[data-v-d17db2d0] {
+    background: #000;
+  }
+
+  .order-details__table[data-v-4601454e] {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .order-details__table th[data-v-4601454e] {
+    margin: 0;
+    padding: 16px;
+    text-align: left;
+    background: #f2f2f2;
+  }
+
+  .wsite-theme-dark .order-details__table th[data-v-4601454e] {
+    background: #000;
+  }
+
+  .order-details__table td[data-v-4601454e] {
+    margin: 0;
+    padding: 16px;
+    text-align: left;
+  }
+
+  .shipping-address__wrapper[data-v-0b54f770] {
+    text-align: left;
+    width: 100%;
+  }
+
+  .reset-password__link[data-v-4f820709] {
+    cursor: pointer;
+  }
+</style>
 <body class="no-banner has-header wsite-page-index wsite-theme-light postload minimal-header">
   <div id="header" class="minimal">
     <div class="header-wrap">
       <div class="logo">
-        <label id="nav-trigger" class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
+        <label id="nav-trigger" class="hamburger" for="mobile-input"><span></span></label>
         <span class="wsite-logo">
           <a href="https://martinwatzinger.github.io/website/">
             <span id="wsite-title">Martin Watzinger</span>
@@ -224,21 +479,36 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
       </div>
       <div id="nav" class="menu">
         <ul class="wsite-menu-default">
-          <li><a href="https://martinwatzinger.github.io/website/CV_Watzinger_18102024.pdf" target="_blank">CV</a></li>
-          <li><a href="https://martinwatzinger.github.io/website/Research%20-%20Martin%20Watzinger.html">Research</a></li>
-          <li><a href="https://martinwatzinger.github.io/website/Contact%20-%20Martin%20Watzinger.html">Contact</a></li>
+          <li id="active" class="wsite-menu-item-wrap wsite-nav-1" style="position: relative;">
+            <a href="https://martinwatzinger.github.io/website/" class="wsite-menu-item" style="position: relative;">
+              Home
+            </a>
+          </li>
+          <li id="pg261512168296771109" class="wsite-menu-item-wrap wsite-nav-2" style="position: relative;">
+            <a href="https://martinwatzinger.github.io/website/CV_Watzinger_18102024.pdf" target="_blank" class="wsite-menu-item" style="position: relative;">
+              CV
+            </a>
+          </li>
+          <li id="pg231453577415125515" class="wsite-menu-item-wrap wsite-nav-3" style="position: relative;">
+            <a href="https://martinwatzinger.github.io/website/Research%20-%20Martin%20Watzinger.html" class="wsite-menu-item" style="position: relative;">
+              Research
+            </a>
+          </li>
+          <li id="pg760411561847987070" class="wsite-menu-item-wrap wsite-nav-4" style="position: relative;">
+            <a href="https://martinwatzinger.github.io/website/Contact%20-%20Martin%20Watzinger.html" class="wsite-menu-item" style="position: relative;">
+              Contact
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </div>
-
   <script type="text/javascript">
     document.getElementById('nav-trigger').addEventListener('click', function() {
       document.getElementById('nav').classList.toggle('open');
     });
   </script>
 </body>
-
 
 
 
