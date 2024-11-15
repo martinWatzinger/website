@@ -124,29 +124,43 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 	}
 //-->
 <script>
-    function initFlyouts(){
+  <script>
+    function initFlyouts() {
         initPublishedFlyoutMenus(
-            [{"id":"458792445878804772","title":"Home","url":"https://www.martin-watzinger.com/","target":"","nav_menu":false,"nonclickable":false},
-             {"id":"363509720734805217","title":"CV","url":"https://www.martin-watzinger.com/CV_Watzinger_18102024.pdf","target":"","nav_menu":false,"nonclickable":false},
-             {"id":"164901991717964450","title":"Research","url":"https://www.martin-watzinger.com/Research%20-%20Martin%20Watzinger.html","target":"","nav_menu":false,"nonclickable":false},
-             {"id":"375855607561486316","title":"Contact","url":"https://www.martin-watzinger.com/Contact%20-%20Martin%20Watzinger.html","target":"","nav_menu":false,"nonclickable":false}],
+            [
+                {"id": "458792445878804772", "title": "Home", "url": "https://www.martin-watzinger.com/", "target": "", "nav_menu": false, "nonclickable": false},
+                {"id": "363509720734805217", "title": "CV", "url": "https://www.martin-watzinger.com/CV_Watzinger_18102024.pdf", "target": "", "nav_menu": false, "nonclickable": false},
+                {"id": "164901991717964450", "title": "Research", "url": "https://www.martin-watzinger.com/Research%20-%20Martin%20Watzinger.html", "target": "", "nav_menu": false, "nonclickable": false},
+                {"id": "375855607561486316", "title": "Contact", "url": "https://www.martin-watzinger.com/Contact%20-%20Martin%20Watzinger.html", "target": "", "nav_menu": false, "nonclickable": false}
+            ],
             "458792445878804772",
             '',
             'active',
             false,
-            {"navigation/item":"<li {{#id}}id=\"{{id}}\"{{/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{/nav_menu}}\n\t\t{{/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t</a>\n\t{{#has_children}}{{> navigation/flyout/list}}{{/has_children}}\n</li>\n",
-             "navigation/flyout/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation/flyout/item}}{{/children}}\n\t</ul>\n</div>\n",
-             "navigation/flyout/item":"<li {{#id}}id=\"{{id}}\"{{/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{/nav_menu}}\n\t\t{{/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t</span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;</span>{{/has_children}}\n\t</a>\n\t{{#has_children}}{{> navigation/flyout/list}}{{/has_children}}\n</li>\n"},
+            {
+                "navigation/item": "<li {{#id}}id=\"{{id}}\"{{/id}} class=\"wsite-menu-item-wrap\">\n\t<a href=\"{{url}}\" class=\"wsite-menu-item\">{{{title_html}}}</a>\n</li>\n",
+                "navigation/flyout/list": "<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">{{#children}}{{> navigation/flyout/item}}{{/children}}</ul>\n</div>\n",
+                "navigation/flyout/item": "<li {{#id}}id=\"{{id}}\"{{/id}} class=\"wsite-menu-subitem-wrap\">\n\t<a href=\"{{url}}\" class=\"wsite-menu-subitem\">{{{title_html}}}</a>\n</li>\n"
+            },
             {}
-        )
+        );
     }
-</script>
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const navTrigger = document.getElementById('nav-trigger');
+        const mobileNav = document.getElementById('navmobile');
+        
+        navTrigger.addEventListener('click', function() {
+            const isOpen = mobileNav.classList.contains('open');
+            mobileNav.classList.toggle('open', !isOpen);
+        });
+    });
+</script>
 </head>
 <body class="header-page wsite-page-index full-width-off wsite-theme-light">
     <div id="header-wrap">
         <div id="header" class="content-wrap container">
-            <label id="nav-trigger" class="hamburger" for="mobile-trigger"></label>
+            <label id="nav-trigger" class="hamburger" for="mobile-trigger">&#9776;</label>
             <div id="logo">
                 <span class="wsite-logo">
                     <a href="https://www.martin-watzinger.com/">
@@ -160,13 +174,13 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
                         <li id="active" class="wsite-menu-item-wrap">
                             <a href="https://www.martin-watzinger.com/" class="wsite-menu-item">Home</a>
                         </li>
-                        <li id="pg363509720734805217" class="wsite-menu-item-wrap">
+                        <li class="wsite-menu-item-wrap">
                             <a href="https://www.martin-watzinger.com/CV_Watzinger_18102024.pdf" class="wsite-menu-item">CV</a>
                         </li>
-                        <li id="pg164901991717964450" class="wsite-menu-item-wrap">
+                        <li class="wsite-menu-item-wrap">
                             <a href="https://www.martin-watzinger.com/Research%20-%20Martin%20Watzinger.html" class="wsite-menu-item">Research</a>
                         </li>
-                        <li id="pg375855607561486316" class="wsite-menu-item-wrap">
+                        <li class="wsite-menu-item-wrap">
                             <a href="https://www.martin-watzinger.com/Contact%20-%20Martin%20Watzinger.html" class="wsite-menu-item">Contact</a>
                         </li>
                     </ul>
@@ -174,6 +188,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
             </div>
         </div>
     </div>
+    <!-- End header-wrap -->
 
     <div id="wrapper">
         <div id="wrapper-content">
@@ -182,21 +197,47 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
                     <li id="active" class="wsite-menu-item-wrap">
                         <a href="https://www.martin-watzinger.com/" class="wsite-menu-item">Home</a>
                     </li>
-                    <li id="pg363509720734805217" class="wsite-menu-item-wrap">
+                    <li class="wsite-menu-item-wrap">
                         <a href="https://www.martin-watzinger.com/CV_Watzinger_18102024.pdf" class="wsite-menu-item">CV</a>
                     </li>
-                    <li id="pg164901991717964450" class="wsite-menu-item-wrap">
+                    <li class="wsite-menu-item-wrap">
                         <a href="https://www.martin-watzinger.com/Research%20-%20Martin%20Watzinger.html" class="wsite-menu-item">Research</a>
                     </li>
-                    <li id="pg375855607561486316" class="wsite-menu-item-wrap">
+                    <li class="wsite-menu-item-wrap">
                         <a href="https://www.martin-watzinger.com/Contact%20-%20Martin%20Watzinger.html" class="wsite-menu-item">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+    <!-- End wrapper -->
+    <style>
+        #nav-trigger {
+            cursor: pointer;
+            font-size: 24px;
+            display: inline-block;
+        }
+        #navmobile {
+            display: none;
+        }
+        #navmobile.open {
+            display: block;
+        }
+        #navmobile ul {
+            background: #fff;
+            padding: 10px;
+            margin: 0;
+            list-style: none;
+        }
+        #navmobile li {
+            margin: 5px 0;
+        }
+        #navmobile a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
 </body>
-
 
 
 		</li>
