@@ -1,146 +1,198 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Martin Watzinger - Home</title>
-  <link rel="stylesheet" type="text/css" href="./Martin Watzinger - Home_files/main_style.css">
-  <link rel="stylesheet" type="text/css" href="./Martin Watzinger - Home_files/font.css">
+    <meta charset="UTF-8">
+    <title>Martin Watzinger - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+    <link id="wsite-base-style" rel="stylesheet" type="text/css" href="./Martin Watzinger - Home_files/sites.css">
+    <link rel="stylesheet" type="text/css" href="./Martin Watzinger - Home_files/fancybox.css">
+    <link rel="stylesheet" type="text/css" href="./Martin Watzinger - Home_files/social-icons.css" media="screen,projection">
+    <link rel="stylesheet" type="text/css" href="./Martin Watzinger - Home_files/main_style.css" title="wsite-theme-css">
+    <link href="./Martin Watzinger - Home_files/font.css" rel="stylesheet" type="text/css">
+    <link href="./Martin Watzinger - Home_files/font(1).css" rel="stylesheet" type="text/css">
+    <style>
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            display: block;
+            margin: 6px 0;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 750px) {
+            .hamburger {
+                display: block;
+            }
+
+            .menu ul {
+                display: none;
+                flex-direction: column;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                border: 1px solid #ddd;
+                padding: 0;
+                margin: 0;
+            }
+
+            .menu.open ul {
+                display: flex;
+            }
+
+            .menu li {
+                text-align: center;
+                padding: 10px;
+            }
+
+            .menu a {
+                text-decoration: none;
+                color: #333;
+                font-size: 16px;
+                display: block;
+            }
+
+            .menu a:hover {
+                background-color: #f5f5f5;
+            }
+        }
+    </style>
 </head>
 <body class="no-banner has-header wsite-page-index wsite-theme-light postload minimal-header">
-  <div id="header" class="minimal">
-    <div class="header-wrap">
-      <div class="logo">
-        <label id="nav-trigger" class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <span class="wsite-logo">
-          <a href="https://martinwatzinger.github.io/website/">
-            <span id="wsite-title">Martin Watzinger</span>
-          </a>
-        </span>
-      </div>
-      <div id="nav" class="menu">
-        <ul class="wsite-menu-default">
-          <li class="wsite-menu-item-wrap wsite-nav-1">
-            <a href="https://martinwatzinger.github.io/website/" class="wsite-menu-item">Home</a>
-          </li>
-          <li class="wsite-menu-item-wrap wsite-nav-2">
-            <a href="https://martinwatzinger.github.io/website/CV_Watzinger_18102024.pdf" target="_blank" class="wsite-menu-item">CV</a>
-          </li>
-          <li class="wsite-menu-item-wrap wsite-nav-3">
-            <a href="research.html" class="wsite-menu-item">Research</a>
-          </li>
-          <li class="wsite-menu-item-wrap wsite-nav-4">
-            <a href="contact.html" class="wsite-menu-item">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div id="wsite-content" class="wsite-elements wsite-not-footer">
-    <div class="wsite-section-wrap">
-      <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-section-effect-reveal wsite-background-1" style="background-color: #ffffff;">
-        <div class="wsite-section-content">
-          <div class="content-wrap container">
-            <div class="wsite-section-elements">
-              <div class="wsite-multicol">
-                <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
-                  <table class="wsite-multicol-table">
-                    <tbody>
-                      <tr>
-                        <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                          <div class="paragraph">
-                            <span style="color:rgb(21, 30, 36)">
-                              <strong>Welcome!</strong><br>
-                              ​I am a <a href="https://www.wiwi.uni-muenster.de/econ/de" target="_blank">Professor of Economics at the University of Münster</a> and a research affiliate at CEPR and CESIfo.
-                            </span>
-                          </div>
-                        </td>
-                        <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
-                          <div class="wsite-image" style="text-align:center;">
-                            <a><img src="./Martin Watzinger - Home_files/a51a7747vwl-profs-neu_orig.jpg" alt="Picture" style="width:auto;max-width:100%;"></a>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+    <div id="header" class="minimal">
+        <div class="header-wrap">
+            <div class="logo">
+                <label id="nav-trigger" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <span class="wsite-logo">
+                    <a href="https://martinwatzinger.github.io/website/">
+                        <span id="wsite-title">Martin Watzinger</span>
+                    </a>
+                </span>
             </div>
-          </div>
+            <div id="nav" class="menu">
+                <ul class="wsite-menu-default">
+                    <li class="wsite-menu-item-wrap wsite-nav-1">
+                        <a href="https://martinwatzinger.github.io/website/">Home</a>
+                    </li>
+                    <li class="wsite-menu-item-wrap wsite-nav-2">
+                        <a href="https://martinwatzinger.github.io/website/CV_Watzinger_18102024.pdf" target="_blank">CV</a>
+                    </li>
+                    <li class="wsite-menu-item-wrap wsite-nav-3">
+                        <a href="https://martinwatzinger.github.io/website/research.html">Research</a>
+                    </li>
+                    <li class="wsite-menu-item-wrap wsite-nav-4">
+                        <a href="https://martinwatzinger.github.io/website/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const navTrigger = document.getElementById('nav-trigger');
-      const navMenu = document.getElementById('nav');
-
-      navTrigger.addEventListener('click', function () {
-        navMenu.classList.toggle('open');
-      });
-
-      navTrigger.addEventListener('touchstart', function () {
-        navMenu.classList.toggle('open');
-      });
-    });
-  </script>
-
-  <style>
-    /* Hamburger menu styling */
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    .hamburger span {
-      height: 3px;
-      width: 25px;
-      background: #333;
-      margin: 3px 0;
-    }
-
-    /* Mobile menu styling */
-    .menu ul {
-      display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 200px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .menu.open ul {
-      display: flex;
-    }
-
-    .menu li {
-      text-align: center;
-      padding: 10px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: #333;
-      font-size: 16px;
-    }
-
-    .menu a:hover {
-      background: #f5f5f5;
-    }
-  </style>
+    <div id="wsite-content" class="wsite-elements wsite-not-footer">
+        <div class="wsite-section-wrap">
+            <div class="wsite-section wsite-body-section wsite-section-bg-color wsite-section-effect-reveal wsite-background-1" style="vertical-align: top;background-color: #ffffff;background-image: none;">
+                <div class="wsite-section-content">
+                    <div class="content-wrap container">
+                        <div class="wsite-section-elements">
+                            <div>
+                                <div class="wsite-multicol">
+                                    <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+                                        <table class="wsite-multicol-table">
+                                            <tbody class="wsite-multicol-tbody">
+                                                <tr class="wsite-multicol-tr">
+                                                    <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+                                                        <div class="paragraph" style="text-align:justify;">
+                                                            <span style="color:rgb(21, 30, 36)">
+                                                                <strong><font size="4">Welcome!</font></strong>
+                                                                <br>
+                                                                <font size="4">​I am a&nbsp;</font>
+                                                            </span>
+                                                            <font size="4">
+                                                                <a href="https://www.wiwi.uni-muenster.de/econ/de" target="_blank">Professor of Economics at the University of Münster</a>&nbsp;and a research affiliate at CEPR and CESIfo. I am also a&nbsp;<a href="https://www.wiwi.uni-muenster.de/mep/en" target="_blank">Director at the Münster Center for Economic Policy</a><span style="color:rgb(21, 30, 36)">&nbsp;and a&nbsp;</span><a href="https://www.reach-euregio.de/" target="_blank">Research Professor at the REACH EUREGIO Start-up Center</a>.
+                                                                <br><br>
+                                                                <span style="color:rgb(21, 30, 36)">I am working on the relation of competition and innovation and the role of science for the innovation process.
+                                                                    <br><br>
+                                                                    <a href="https://martinwatzinger.github.io/website/CV_Watzinger_18102024.pdf" target="_blank">You can find my CV here.</a>
+                                                                </span>
+                                                            </font>
+                                                        </div>
+                                                    </td>
+                                                    <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+                                                        <div>
+                                                            <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+                                                                <a>
+                                                                    <img src="./Martin Watzinger - Home_files/a51a7747vwl-profs-neu_orig.jpg" alt="Picture" style="width:auto;max-width:100%">
+                                                                </a>
+                                                                <div style="display:block;font-size:90%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear:both;"></div>
+                            <div class="paragraph" style="text-align:left;">
+                                <strong><font size="4">WORK IN PROGRESS</font></strong>
+                            </div>
+                            <div class="wsite-multicol">
+                                <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+                                    <table class="wsite-multicol-table">
+                                        <tbody class="wsite-multicol-tbody">
+                                            <tr class="wsite-multicol-tr">
+                                                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+                                                    <h2 class="wsite-content-title"><strong>The Breakup of Bell and its Impact on Innovation</strong></h2>
+                                                    <div class="paragraph">
+                                                        <font size="4">
+                                                            with&nbsp;
+                                                            <a href="https://www.monika-schnitzer.com/research.html" target="_blank">Monika Schnitzer<br>​</a>
+                                                            <br>
+                                                            <a href="https://martinwatzinger.github.io/website/Martin Watzinger - Home_files/watzinger_schnitzer_breakup_of_bell.pdf">​Download</a>&nbsp;| <a href="https://cepr.org/publications/dp17635" target="_blank">CEPR Discussion Paper</a>
+                                                        </font>
+                                                    </div>
+                                                </td>
+                                                <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+                                                    <div>
+                                                        <div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:left">
+                                                            <a>
+                                                                <img src="./Martin Watzinger - Home_files/total-us.png" alt="Picture" style="width:auto;max-width:100%">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div style="height: 20px; overflow: hidden; width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('nav-trigger').addEventListener('click', function() {
+            document.getElementById('nav').classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
