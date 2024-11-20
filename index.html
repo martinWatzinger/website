@@ -113,8 +113,8 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 	
 	function initFlyouts(){
 		initPublishedFlyoutMenus(
-			[{"id":"692361214600623975","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"261512168296771109","title":"CV","url":"https:\/\/www.martin-watzinger.com\/uploads\/4\/9\/4\/1\/49415675\/CV_Watzinger_18102024.pdf","target":"_blank","nav_menu":false,"nonclickable":false},{"id":"231453577415125515","title":"Research","url":"research.html","target":"","nav_menu":false,"nonclickable":false},{"id":"760411561847987070","title":"Contact","url":"contact.html","target":"","nav_menu":false,"nonclickable":false}],
-			"692361214600623975",
+			[{"id":"692361214600623975","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"261512168296771109","title":"CV","url":"https:\/\/www.martin-watzinger.com\/uploads\/4\/9\/4\/1\/49415675\/cv_watzinger_0702023.pdf","target":"_blank","nav_menu":false,"nonclickable":false},{"id":"231453577415125515","title":"Research","url":"research.html","target":"","nav_menu":false,"nonclickable":false},{"id":"760411561847987070","title":"Contact","url":"contact.html","target":"","nav_menu":false,"nonclickable":false}],
+			"760411561847987070",
 			'',
 			'active',
 			false,
@@ -126,411 +126,112 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 </script>
 		
 		
-<style type="text/css">
-  /* Standard Styles */
-  .customer-accounts-app__body[data-v-7ef42737] {
-    width: 100%;
-  }
+	<style type="text/css">.customer-accounts-app__body[data-v-7ef42737]{width:100%}.customer-accounts-app__modal-wrapper[data-v-7ef42737]{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:17;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(0,0,0,.25)}.customer-accounts-app__modal[data-v-7ef42737]{width:580px;box-sizing:border-box;max-height:100%;min-height:415px;overflow-y:auto;z-index:18;padding:24px;background:#fff;display:flex}.wsite-theme-dark .customer-accounts-app__modal-wrapper[data-v-7ef42737]{background:hsla(0,0%,100%,.25)}.wsite-theme-dark .customer-accounts-app__modal[data-v-7ef42737]{background:#000}@media (max-width:750px){.customer-accounts-app__modal[data-v-7ef42737]{width:100%;height:100%}}</style><style type="text/css">.loading[data-v-db79aa1c]{display:flex;width:100%;align-items:center;justify-content:center;margin:15px 0}</style><style type="text/css">.page-header__wrapper[data-v-ed59fae0]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.page-header__text[data-v-ed59fae0]{margin:0 32px 0 0}.page-header__divider[data-v-ed59fae0]{height:1px;width:100%;margin:24px 0;background:rgba(0,0,0,.1)}</style><style type="text/css">.form-field[data-v-2b04d498]{margin:16px 0}.form-field__label[data-v-2b04d498]{display:flex;flex-direction:column}.form-field__title[data-v-2b04d498]{margin-bottom:8px;font-size:90%;color:#3b526d}.wsite-theme-dark .form-field__title[data-v-2b04d498]{color:#dfe6ee}.form-field__error[data-v-2b04d498]{margin-top:14px}</style><style type="text/css">.field-error[data-v-338d8d38]{color:#ff2825}</style><style type="text/css">.form-instructions[data-v-8ddff154]{margin-bottom:24px}</style><style type="text/css">.site-input[data-v-4c05aa90]{border:1px solid #dbdbdb;padding:8px;border-radius:2px}.site-input__is-invalid[data-v-4c05aa90]{border:1px solid #ff2825}</style><style type="text/css">.actions-row[data-v-136b380e]{margin-top:24px;display:flex;flex-direction:row;justify-content:space-between;align-items:center}.actions-row div[data-v-136b380e]:first-child{margin-right:16px}</style><style type="text/css">.back-button[data-v-fe280eac]{display:flex;flex-direction:row;align-items:center}.back-button__icon[data-v-fe280eac]{margin:0 8px 0 0}</style><style type="text/css">p[data-v-6cc325c4]{font-weight:700}.order-confirmation__checkbox[data-v-6cc325c4]{margin-right:6px}.order-confirmation__success-message[data-v-6cc325c4]{display:flex;flex-direction:row;align-items:center}</style><style type="text/css">.register__privacy-policy[data-v-0761b96f]{margin:24px 0;font-size:small}</style><style type="text/css">.customer-accounts-app__body[data-v-55d84bd4]{width:100%}.customer-accounts-app__modal-wrapper[data-v-55d84bd4]{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:17;display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(0,0,0,.25)}.customer-accounts-app__modal[data-v-55d84bd4]{width:580px;box-sizing:border-box;max-height:100%;min-height:415px;overflow-y:auto;z-index:18;padding:24px;background:#fff;display:flex}.wsite-theme-dark .customer-accounts-app__modal-wrapper[data-v-55d84bd4]{background:hsla(0,0%,100%,.25)}.wsite-theme-dark .customer-accounts-app__modal[data-v-55d84bd4]{background:#000}@media (max-width:600px){.customer-accounts-app__modal[data-v-55d84bd4]{width:100%;height:100%}}</style><style type="text/css">.account-details__wrapper[data-v-398277ef]{width:100%}.account-details__group[data-v-398277ef]{margin-bottom:24px;text-align:left}.account-details__table-container[data-v-398277ef]{overflow:auto}.account-details__title[data-v-398277ef]{text-align:left;margin-bottom:6px}.account-details__log-out[data-v-398277ef]{cursor:pointer}.account-details__error[data-v-398277ef]{margin:36px 0;text-align:left}.error[data-v-398277ef]{color:#ff2825}</style><style type="text/css">.section-header__wrapper[data-v-30a09418]{display:flex;flex-direction:row;align-items:center;justify-content:space-between}.section-header__text[data-v-30a09418]{margin:24px 0}</style><style type="text/css">.empty-content-area__container[data-v-d17db2d0]{display:flex;flex-direction:row;align-items:center;justify-content:center;margin-bottom:32px;width:100%;min-height:80px;background:#f2f2f2}.wsite-theme-dark .empty-content-area__container[data-v-d17db2d0]{background:#000}</style><style type="text/css">.order-details__table[data-v-4601454e]{width:100%;margin-top:12px;margin-bottom:36px;empty-cells:show;border-collapse:collapse;border-spacing:0;border:none}.order-details__table th[data-v-4601454e]{margin:0;padding:16px;text-align:left;background:#f2f2f2}.wsite-theme-dark .order-details__table th[data-v-4601454e]{background:#000}.order-details__table td[data-v-4601454e]{margin:0;padding:16px;text-align:left}</style><style type="text/css">.shipping-address__wrapper[data-v-0b54f770]{text-align:left;width:100%}</style><style type="text/css">.reset-password__link[data-v-4f820709]{cursor:pointer}</style></head>
+	<body class="header-page has-header  wsite-page-contact  wsite-theme-light postload"><div id="header">
+		<div class="header-wrap">
+			<div class="logo">
+				<label id="nav-trigger" class="hamburger" for="mobile-input"><span></span></label>
+				<span class="wsite-logo">
 
-  /* Modal */
-  .customer-accounts-app__modal-wrapper[data-v-7ef42737] {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 17;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, .25);
-  }
+	<a href="https://www.martin-watzinger.com/">
+	
+	<span id="wsite-title">Martin Watzinger</span>
+	
+	</a>
 
-  .customer-accounts-app__modal[data-v-7ef42737] {
-    width: 580px;
-    box-sizing: border-box;
-    max-height: 100%;
-    min-height: 415px;
-    overflow-y: auto;
-    z-index: 18;
-    padding: 24px;
-    background: #fff;
-    display: flex;
-  }
-
-  .wsite-theme-dark .customer-accounts-app__modal-wrapper[data-v-7ef42737] {
-    background: hsla(0, 0%, 100%, .25);
-  }
-
-  .wsite-theme-dark .customer-accounts-app__modal[data-v-7ef42737] {
-    background: #000;
-  }
-
-  @media (max-width: 750px) {
-    .customer-accounts-app__modal[data-v-7ef42737] {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  /* Hamburger Navigation Styles */
-  .menu {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .hamburger {
-    display: none;
-    cursor: pointer;
-  }
-
-  .hamburger span {
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    display: block;
-    margin: 6px 0;
-    transition: all 0.3s ease;
-  }
-
-  @media (max-width: 750px) {
-    .hamburger {
-      display: block;
-    }
-
-    .menu ul {
-      display: none;
-      flex-direction: column;
-      background-color: #fff;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 200px;
-      border: 1px solid #ddd;
-      padding: 0;
-      margin: 0;
-    }
-
-    .menu.open ul {
-      display: flex;
-    }
-
-    .menu li {
-      text-align: center;
-      padding: 10px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: #333;
-      font-size: 16px;
-      display: block;
-    }
-
-    .menu a:hover {
-      background-color: #f5f5f5;
-    }
-  }
-
-  /* Desktop Styles (unchanged) */
-  .page-header__wrapper[data-v-ed59fae0] {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .page-header__text[data-v-ed59fae0] {
-    margin: 0 32px 0 0;
-  }
-
-  .page-header__divider[data-v-ed59fae0] {
-    height: 1px;
-    width: 100%;
-    margin: 24px 0;
-    background: rgba(0, 0, 0, .1);
-  }
-  
-  .form-field[data-v-2b04d498] {
-    margin: 16px 0;
-  }
-
-  .form-field__label[data-v-2b04d498] {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-field__title[data-v-2b04d498] {
-    margin-bottom: 8px;
-    font-size: 90%;
-    color: #3b526d;
-  }
-
-  .wsite-theme-dark .form-field__title[data-v-2b04d498] {
-    color: #dfe6ee;
-  }
-
-  .form-field__error[data-v-2b04d498] {
-    margin-top: 14px;
-  }
-
-  .field-error[data-v-338d8d38] {
-    color: #ff2825;
-  }
-
-  .form-instructions[data-v-8ddff154] {
-    margin-bottom: 24px;
-  }
-
-  .site-input[data-v-4c05aa90] {
-    border: 1px solid #dbdbdb;
-    padding: 8px;
-    border-radius: 2px;
-  }
-
-  .site-input__is-invalid[data-v-4c05aa90] {
-    border: 1px solid #ff2825;
-  }
-
-  .actions-row[data-v-136b380e] {
-    margin-top: 24px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .actions-row div[data-v-136b380e]:first-child {
-    margin-right: 16px;
-  }
-
-  .back-button[data-v-fe280eac] {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .back-button__icon[data-v-fe280eac] {
-    margin: 0 8px 0 0;
-  }
-
-  p[data-v-6cc325c4] {
-    font-weight: 700;
-  }
-
-  .order-confirmation__checkbox[data-v-6cc325c4] {
-    margin-right: 6px;
-  }
-
-  .order-confirmation__success-message[data-v-6cc325c4] {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .register__privacy-policy[data-v-0761b96f] {
-    margin: 24px 0;
-    font-size: small;
-  }
-
-  .customer-accounts-app__body[data-v-55d84bd4] {
-    width: 100%;
-  }
-
-  .customer-accounts-app__modal-wrapper[data-v-55d84bd4] {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 17;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, .25);
-  }
-
-  .customer-accounts-app__modal[data-v-55d84bd4] {
-    width: 580px;
-    box-sizing: border-box;
-    max-height: 100%;
-    min-height: 415px;
-    overflow-y: auto;
-    z-index: 18;
-    padding: 24px;
-    background: #fff;
-    display: flex;
-  }
-
-  .wsite-theme-dark .customer-accounts-app__modal-wrapper[data-v-55d84bd4] {
-    background: hsla(0, 0%, 100%, .25);
-  }
-
-  .wsite-theme-dark .customer-accounts-app__modal[data-v-55d84bd4] {
-    background: #000;
-  }
-
-  @media (max-width: 600px) {
-    .customer-accounts-app__modal[data-v-55d84bd4] {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  /* Desktop Layout */
-  .account-details__wrapper[data-v-398277ef] {
-    width: 100%;
-  }
-
-  .account-details__group[data-v-398277ef] {
-    margin-bottom: 24px;
-    text-align: left;
-  }
-
-  .account-details__table-container[data-v-398277ef] {
-    overflow: auto;
-  }
-
-  .account-details__title[data-v-398277ef] {
-    text-align: left;
-    margin-bottom: 6px;
-  }
-
-  .account-details__log-out[data-v-398277ef] {
-    cursor: pointer;
-  }
-
-  .account-details__error[data-v-398277ef] {
-    margin: 36px 0;
-    text-align: left;
-  }
-
-  .error[data-v-398277ef] {
-    color: #ff2825;
-  }
-
-  .section-header__wrapper[data-v-30a09418] {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .section-header__text[data-v-30a09418] {
-    margin: 24px 0;
-  }
-
-  .empty-content-area__container[data-v-d17db2d0] {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 32px;
-    width: 100%;
-    min-height: 80px;
-    background: #f2f2f2;
-  }
-
-  .wsite-theme-dark .empty-content-area__container[data-v-d17db2d0] {
-    background: #000;
-  }
-
-  .order-details__table[data-v-4601454e] {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  .order-details__table th[data-v-4601454e] {
-    margin: 0;
-    padding: 16px;
-    text-align: left;
-    background: #f2f2f2;
-  }
-
-  .wsite-theme-dark .order-details__table th[data-v-4601454e] {
-    background: #000;
-  }
-
-  .order-details__table td[data-v-4601454e] {
-    margin: 0;
-    padding: 16px;
-    text-align: left;
-  }
-
-  .shipping-address__wrapper[data-v-0b54f770] {
-    text-align: left;
-    width: 100%;
-  }
-
-  .reset-password__link[data-v-4f820709] {
-    cursor: pointer;
-  }
-</style>
-<body class="no-banner has-header wsite-page-index wsite-theme-light postload minimal-header">
-  <div id="header" class="minimal">
-    <div class="header-wrap">
-      <div class="logo">
-        <label id="nav-trigger" class="hamburger" for="mobile-input"><span></span></label>
-        <span class="wsite-logo">
-          <a href="https://martinwatzinger.github.io/website/">
-            <span id="wsite-title">Martin Watzinger</span>
-          </a>
-        </span>
-      </div>
-      <div id="nav" class="menu">
-        <ul class="wsite-menu-default">
-          <li id="active" class="wsite-menu-item-wrap wsite-nav-1" style="position: relative;">
-            <a href="https://martinwatzinger.github.io/website/" class="wsite-menu-item" style="position: relative;">
-              Home
-            </a>
-          </li>
-          <li id="pg261512168296771109" class="wsite-menu-item-wrap wsite-nav-2" style="position: relative;">
-            <a href="https://martinwatzinger.github.io/website/CV_Watzinger_18102024.pdf" target="_blank" class="wsite-menu-item" style="position: relative;">
-              CV
-            </a>
-          </li>
-          <li id="pg231453577415125515" class="wsite-menu-item-wrap wsite-nav-3" style="position: relative;">
-            <a href="https://martinwatzinger.github.io/website/Research%20-%20Martin%20Watzinger.html" class="wsite-menu-item" style="position: relative;">
-              Research
-            </a>
-          </li>
-          <li id="pg760411561847987070" class="wsite-menu-item-wrap wsite-nav-4" style="position: relative;">
-            <a href="https://martinwatzinger.github.io/website/Contact%20-%20Martin%20Watzinger.html" class="wsite-menu-item" style="position: relative;">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    document.getElementById('nav-trigger').addEventListener('click', function() {
-      document.getElementById('nav').classList.toggle('open');
-    });
-  </script>
-</body>
-
-
-
-
+</span>
+			</div>
+			<div id="nav" class="menu">
+				<ul class="wsite-menu-default">
+						<li id="pg692361214600623975" class="wsite-menu-item-wrap   wsite-nav-1" style="position: relative;">
+							<a href="https://www.martin-watzinger.com/" class="wsite-menu-item" style="position: relative;">
+								Home
+							</a>
+							
+						</li>
+						<li id="pg261512168296771109" class="wsite-menu-item-wrap   wsite-nav-2" style="position: relative;">
+							<a href="https://www.martin-watzinger.com/CV_Watzinger_18102024.pdf" target="_blank" class="wsite-menu-item" style="position: relative;">
+								CV
+							</a>
+							
+						</li>
+						<li id="pg231453577415125515" class="wsite-menu-item-wrap   wsite-nav-3" style="position: relative;">
+							<a href="https://www.martin-watzinger.com/Research%20-%20Martin%20Watzinger.html" class="wsite-menu-item" style="position: relative;">
+								Research
+							</a>
+							
+						</li>
+						<li id="active" class="wsite-menu-item-wrap   wsite-nav-4" style="position: relative;">
+							<a href="https://www.martin-watzinger.com/Contact%20-%20Martin%20Watzinger.html" class="wsite-menu-item" style="position: relative;">
+								Contact
+							</a>
+							
+						</li>
+				</ul>
+			</div>
+			<div id="navmobile" class="menu"><div class="wsite-mobile-menu" style="display: block;"><div class="wsite-animation-wrap" style="position: relative;"><ul class="wsite-menu-default wsite-menu-slide" style="position: absolute; top: 0px; left: 0px; width: 100%;">
+		<li id="pg692361214600623975" class="wsite-menu-item-wrap">
+			<a href="https://www.martin-watzinger.com/" class="wsite-menu-item">
+				Home
+			</a>
+			
+		</li>
+		<li id="pg261512168296771109" class="wsite-menu-item-wrap">
+			<a href="https://www.martin-watzinger.com/CV_Watzinger_18102024.pdf" target="_blank" class="wsite-menu-item">
+				CV
+			</a>
+			
+		</li>
+		<li id="pg231453577415125515" class="wsite-menu-item-wrap">
+			<a href="https://www.martin-watzinger.com/Research%20-%20Martin%20Watzinger.html" class="wsite-menu-item">
+				Research
+			</a>
+			
+		</li>
+		<li id="active" class="wsite-menu-item-wrap">
+			<a href="https://www.martin-watzinger.com/Contact%20-%20Martin%20Watzinger.html" class="wsite-menu-item">
+				Contact
+			</a>
+			
 		</li>
 </ul></div></div>
 </div>
 		</div>
 	</div>
+	<div class="banner-wrap">
+		<div class="wsite-elements wsite-not-footer wsite-header-elements">
+	<div class="wsite-section-wrap">
+	<div class="wsite-section wsite-header-section wsite-section-bg-color" style="height: auto;vertical-align: middle;background-color: #fff;background-image: none;is_customized: 1;">
+		<div class="wsite-section-content">
+			
+			<div class="banner">
+				<div class="banner-inner">
+				<div class="wsite-section-elements">
+					
+				</div>
+			</div>
+			</div>
+		
+		</div>
+		<div class=""></div>
+	</div>
+</div>
+
+</div>
+
+	</div>
 	<div id="wsite-content" class="wsite-elements wsite-not-footer">
 	<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-body-section wsite-section-bg-color wsite-section-effect-reveal wsite-background-1" style="vertical-align: top;background-color: #ffffff;background-image: none;">
+	<div class="wsite-section wsite-body-section wsite-background-4">
 		<div class="wsite-section-content">
 		<div class="content-wrap container">
 			<div class="wsite-section-elements">
-				<div class="" data-sr-id="2" style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.3s ease-in 0.3s, opacity 0.3s ease-in 0.3s; transition: transform 0.3s ease-in 0.3s, opacity 0.3s ease-in 0.3s; "><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+				<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
 	<table class="wsite-multicol-table">
 		<tbody class="wsite-multicol-tbody">
 			<tr class="wsite-multicol-tr">
 				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+		
 					
 						
 
