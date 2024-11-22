@@ -196,20 +196,16 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 		</li>
 </ul></div></div>
 </div>
-		</div>
-	</div>
-	<div class="banner-wrap">
-		<div class="wsite-elements wsite-not-footer wsite-header-elements">
-	<div class="wsite-section-wrap">
-	<div class="wsite-section wsite-header-section wsite-section-bg-color" style="height: auto;vertical-align: middle;background-color: #fff;background-image: none;is_customized: 1;">
-		<div class="wsite-section-content">
-			
-			<div class="banner">
-				<div class="banner-inner">
-				<div class="wsite-section-elements">
-					
-				</div>
-			</div>
+	<div id="banner" class="banner">
+    <p>Willkommen zu unserer Webseite!</p>
+    <button onclick="closeBanner()">Schließen</button>
+</div>
+<script>
+    function closeBanner() {
+        document.getElementById('banner').style.display = 'none';
+    }
+</script>
+
 			</div>
 		
 		</div>
